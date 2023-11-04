@@ -1,0 +1,121 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-11-02 20:04:03.110201",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "status",
+  "column_break_bruye",
+  "visit_date",
+  "section_break_wzzvr",
+  "customer_record_number",
+  "current_weight",
+  "column_break_swal0",
+  "customer_name",
+  "section_break_4tikb",
+  "suggested_products",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series ",
+   "options": "CV-.YYYY.-",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer_record_number",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Customer Record Number",
+   "options": "Customer Records",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "customer_record_number.customer",
+   "fetch_if_empty": 1,
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name",
+   "read_only": 1
+  },
+  {
+   "default": "now",
+   "fieldname": "visit_date",
+   "fieldtype": "Datetime",
+   "label": "Visit Date "
+  },
+  {
+   "fieldname": "column_break_bruye",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Free\nSubscription\nPaid"
+  },
+  {
+   "fieldname": "current_weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Current Weight"
+  },
+  {
+   "fieldname": "suggested_products",
+   "fieldtype": "Table",
+   "label": "Suggested Products",
+   "options": "Suggested Products"
+  },
+  {
+   "fieldname": "section_break_4tikb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_wzzvr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_swal0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-11-03 11:43:19.527353",
+ "modified_by": "Administrator",
+ "module": "Fitness Center",
+ "name": "Customer Visits",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

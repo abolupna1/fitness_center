@@ -1,0 +1,142 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-11-03 10:15:19.556443",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "status",
+  "section_break_9wsho",
+  "customer_record_number",
+  "column_break_yeyjw",
+  "customer_name",
+  "section_break_n7jjm",
+  "subscription_package",
+  "column_break_xehg9",
+  "invoice_number",
+  "section_break_rkleq",
+  "start",
+  "column_break_lkmlw",
+  "end",
+  "section_break_eyxpr",
+  "appointments"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series ",
+   "options": "CS-.YYYY.-",
+   "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Inactive\nActive\nFinished"
+  },
+  {
+   "fieldname": "customer_record_number",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Customer Record Number",
+   "options": "Customer Records",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "customer_record_number.customer",
+   "fetch_if_empty": 1,
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "subscription_package",
+   "fieldtype": "Link",
+   "label": "Subscription Package",
+   "options": "Item"
+  },
+  {
+   "fieldname": "start",
+   "fieldtype": "Date",
+   "label": "Start"
+  },
+  {
+   "fieldname": "end",
+   "fieldtype": "Date",
+   "label": "End"
+  },
+  {
+   "fieldname": "invoice_number",
+   "fieldtype": "Link",
+   "label": "Invoice Number",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "section_break_9wsho",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_yeyjw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_n7jjm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_xehg9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_rkleq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_lkmlw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_eyxpr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "appointments",
+   "fieldtype": "Table",
+   "label": "Appointments",
+   "options": "Customer Appointment"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-11-03 11:14:55.604787",
+ "modified_by": "Administrator",
+ "module": "Fitness Center",
+ "name": "Customer Subscriptions",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
