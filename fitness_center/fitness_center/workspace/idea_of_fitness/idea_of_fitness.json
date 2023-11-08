@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"Sdo8F9ETy4\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Idea Of Fitness</span>\",\"col\":12}},{\"id\":\"hdzsjAENmC\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"VpHJOWUci7\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Link Fast</b></span>\",\"col\":12}},{\"id\":\"UsUFFceBOv\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"All Customer Records\",\"col\":4}},{\"id\":\"SQAbLV2JYw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Customer Visits\",\"col\":4}},{\"id\":\"KzITBQFRIL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Customer Subscriptions\",\"col\":4}},{\"id\":\"YEqMXS3G3O\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"DVLrUN-F11\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports</b></span>\",\"col\":12}},{\"id\":\"JRtB_Rp8Jh\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Customer Records\",\"col\":3}}]",
+ "content": "[{\"id\":\"Sdo8F9ETy4\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Idea Of Fitness</span>\",\"col\":12}},{\"id\":\"hdzsjAENmC\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"VpHJOWUci7\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Link Fast</b></span>\",\"col\":12}},{\"id\":\"UsUFFceBOv\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"All Customer Records\",\"col\":4}},{\"id\":\"SQAbLV2JYw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Customer Visits\",\"col\":4}},{\"id\":\"KzITBQFRIL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Customer Subscriptions\",\"col\":4}},{\"id\":\"YEqMXS3G3O\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"DVLrUN-F11\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports</b></span>\",\"col\":12}},{\"id\":\"JRtB_Rp8Jh\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Report Customer Records\",\"col\":3}}]",
  "creation": "2023-11-05 08:38:49.272873",
  "custom_blocks": [],
  "docstatus": 0,
@@ -12,7 +12,7 @@
  "is_hidden": 0,
  "label": "Idea Of Fitness",
  "links": [],
- "modified": "2023-11-07 19:14:54.007797",
+ "modified": "2023-11-08 14:40:14.331849",
  "modified_by": "Administrator",
  "module": "Fitness Center",
  "name": "Idea Of Fitness",
@@ -43,7 +43,7 @@
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Customer Records",
+   "label": "Report Customer Records",
    "link_to": "Customer Records",
    "type": "Report"
   },
