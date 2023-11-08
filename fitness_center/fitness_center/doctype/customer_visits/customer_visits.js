@@ -2,7 +2,10 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Customer Visits', {
-	// refresh: function(frm) {
+	refresh: function(frm) {
 
-	// }
+		frm.set_df_property('customer_record_number', 'only_select', true);
+
+
+	}
 });
