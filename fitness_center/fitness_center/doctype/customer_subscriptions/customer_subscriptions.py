@@ -1,8 +1,8 @@
 # Copyright (c) 2023, edom ibrahim and contributors
 # For license information, please see license.txt
 from frappe.utils import add_to_date
-from frappe.utils import today
-
+from frappe.utils import today,getdate
+from datetime import datetime
 
 import frappe
 from frappe.model.document import Document
@@ -12,7 +12,9 @@ class CustomerSubscriptions(Document):
         self.appointments = []
         dates = []
         d = self.start
-        for i in range(int(self.month_cont)):
+        end = add_to_date(d, months=self.month_cont)
+        m_count = (getdate(end) - getdate(d)).days / 7
+        for i in range(int(m_count)):
             if d > today():
                 vis={"date":d,"time":self.scheduled_time,"day":self.scheduled_day}
                 dates.append(vis)
@@ -21,8 +23,8 @@ class CustomerSubscriptions(Document):
                 'scheduled_time':self.scheduled_time,
                 'scheduled_day' : self.scheduled_day
             })
+            self.end=d
             d =add_to_date(d, days=7)
-        self.end=d
         records=frappe.db.get_list('Customer Visits', filters=[
             ['scheduled__date', 'between', [add_to_date(today(), days=1),self.end]],
             ['status_schedule', '=', "Scheduled"],
@@ -45,7 +47,9 @@ class CustomerSubscriptions(Document):
         self.appointments = []
         dates = []
         d = self.start
-        for i in range(int(self.month_cont)):
+        end = add_to_date(d, months=self.month_cont)
+        m_count = (getdate(end) - getdate(d)).days / 7
+        for i in range(int(m_count)):
             if d > today():
                 vis={"date":d,"time":self.scheduled_time,"day":self.scheduled_day}
                 dates.append(vis)
@@ -54,8 +58,10 @@ class CustomerSubscriptions(Document):
                 'scheduled_time':self.scheduled_time,
                 'scheduled_day' : self.scheduled_day
 			})
+            self.end=d
             d =add_to_date(d, days=7)
-        self.end=d
+            
+       
         records=frappe.db.get_list('Customer Visits', filters=[
             ['scheduled__date', 'between', [add_to_date(today(), days=1),self.end]],
             ['status_schedule', '=', "Scheduled"],
