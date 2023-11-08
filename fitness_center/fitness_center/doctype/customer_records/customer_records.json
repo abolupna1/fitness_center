@@ -112,7 +112,6 @@
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "hidden": 1,
-   "in_list_view": 1,
    "label": "naming_series",
    "options": "YYYY.-"
   },
@@ -138,7 +137,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-07 18:12:14.885155",
+ "modified": "2023-11-08 23:33:28.548368",
  "modified_by": "Administrator",
  "module": "Fitness Center",
  "name": "Customer Records",

@@ -71,6 +71,10 @@
   {
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
    "label": "Status",
    "options": "Free\nSubscription\nPaid"
   },
@@ -171,7 +175,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-08 18:11:26.415150",
+ "modified": "2023-11-08 23:45:41.093972",
  "modified_by": "Administrator",
  "module": "Fitness Center",
  "name": "Customer Visits",
