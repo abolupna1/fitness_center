@@ -7,6 +7,14 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "scheduled__date",
+  "column_break_nyuda",
+  "scheduled_time",
+  "column_break_inoex",
+  "scheduled_day",
+  "column_break_brkgw",
+  "status_schedule",
+  "section_break_zgx4a",
   "naming_series",
   "status",
   "column_break_bruye",
@@ -20,7 +28,8 @@
   "customer_mobile",
   "section_break_4tikb",
   "suggested_products",
-  "notes"
+  "notes",
+  "amended_from"
  ],
  "fields": [
   {
@@ -108,11 +117,61 @@
   {
    "fieldname": "column_break_a0kfx",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "scheduled__date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Scheduled  Date"
+  },
+  {
+   "fieldname": "scheduled_time",
+   "fieldtype": "Time",
+   "label": "Scheduled Time"
+  },
+  {
+   "fieldname": "scheduled_day",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "label": "Scheduled Day",
+   "options": "\nSunday\nMonday\nTuesday\nWednesday\nThursday\nFriday\nSaturday"
+  },
+  {
+   "fieldname": "column_break_nyuda",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_inoex",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_zgx4a",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Customer Visits",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "status_schedule",
+   "fieldtype": "Select",
+   "label": "Status Schedule",
+   "options": "\nScheduled\nFinish\nCancel"
+  },
+  {
+   "fieldname": "column_break_brkgw",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-11-07 18:11:03.363841",
+ "modified": "2023-11-08 18:11:26.415150",
  "modified_by": "Administrator",
  "module": "Fitness Center",
  "name": "Customer Visits",
