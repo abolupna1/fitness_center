@@ -9,6 +9,7 @@ class CustomerRecords(Document):
 		territory = frappe.db.exists('Territory',{"name": 'Saudi Arabia'},cache=True)
 		if check:
 			self.customer = check
+			
 		else:
 			entry=frappe.new_doc("Customer")
 			entry.customer_name = self.customer_name
@@ -27,6 +28,14 @@ class CustomerRecords(Document):
 		vsit.customer_record_number = self.name
 		vsit.insert()
 
+		customer = frappe.get_doc('Customer',self.customer)		
+		if not customer.customer_primary_contact:
+			self.add_update_mobile(customer.customer_name,customer)
+		
+
+
+
+
 	def on_update(self):
 		customer = frappe.get_doc('Customer',self.customer)
 		
@@ -34,6 +43,39 @@ class CustomerRecords(Document):
 			check = frappe.db.get_list('Customer',filters={"mobile_no":self.customer_mobile})
 			if len(check)>0:
 				frappe.throw("رقم الجوال مرتبط مع عميل سابق ")
+		
+		if not customer.customer_primary_contact:
+			self.add_update_mobile(customer.customer_name,customer)
+		
+		
+
+			
+
+
+	def add_update_mobile(self,customer_name,link_name):
+		contact = frappe.new_doc('Contact')
+		contact.first_name = customer_name
+		contact.append("phone_nos",{
+                'phone': self.customer_mobile,
+                'is_primary_phone':True,
+                'is_primary_mobile_no' : True
+			})
+		contact.append("links",{
+                'link_doctype': 'Customer',
+                'link_name':link_name,
+                'link_title' : customer_name
+			})
+
+		contact.insert()
+		customer = frappe.get_doc('Customer',self.customer)	
+		customer.customer_primary_contact = contact.name
+		customer.mobile_no = self.customer_mobile
+		customer.db_update()
+
+
+
+	
+
 
 
 
