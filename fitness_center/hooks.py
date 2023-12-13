@@ -7,6 +7,8 @@ app_description = "Fitness center"
 app_email = "abolupna1@gmail.com"
 app_license = "MIT"
 
+fixtures = ["Custom Field"]
+
 # Includes in <head>
 # ------------------
 
@@ -128,7 +130,12 @@ app_license = "MIT"
 
 # Scheduled Tasks
 # ---------------
+# scheduler_events = {
+# 	"cron": [
+# 		"fitness_center.tasks.all"
+# 	],
 
+# }
 # scheduler_events = {
 #	"all": [
 #		"fitness_center.tasks.all"

@@ -1,0 +1,42 @@
+{
+ "actions": [],
+ "creation": "2023-12-03 11:26:48.930732",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "percentage",
+  "due",
+  "achieved_goal"
+ ],
+ "fields": [
+  {
+   "fieldname": "percentage",
+   "fieldtype": "Percent",
+   "label": "Percentage"
+  },
+  {
+   "fieldname": "due",
+   "fieldtype": "Percent",
+   "label": "Due"
+  },
+  {
+   "default": "0",
+   "fieldname": "achieved_goal",
+   "fieldtype": "Check",
+   "label": "Achieved Goal"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-12-11 12:01:21.182760",
+ "modified_by": "Administrator",
+ "module": "Fitness Center Target",
+ "name": "Target Percentages",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

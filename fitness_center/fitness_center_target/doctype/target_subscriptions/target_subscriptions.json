@@ -1,0 +1,58 @@
+{
+ "actions": [],
+ "creation": "2023-12-03 11:36:33.818542",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "item_name",
+  "number_of_sale",
+  "due",
+  "total"
+ ],
+ "fields": [
+  {
+   "fieldname": "due",
+   "fieldtype": "Currency",
+   "label": "Due"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "number_of_sale",
+   "fieldtype": "Int",
+   "label": "Number of sale",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "total",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "item_name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-12-03 12:49:40.795307",
+ "modified_by": "Administrator",
+ "module": "Fitness Center Target",
+ "name": "Target Subscriptions",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
