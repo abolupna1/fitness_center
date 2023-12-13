@@ -139,7 +139,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-06 12:11:05.291403",
+ "modified": "2023-12-13 12:38:40.818733",
  "modified_by": "Administrator",
  "module": "Fitness Center Target",
  "name": "Target",
@@ -157,6 +157,10 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Target Employee"
   }
  ],
  "sort_field": "modified",
