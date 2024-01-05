@@ -12,6 +12,6 @@ def get_loyalty_amount(doc, method=None):
 		fields = ["*"])
     for inv in get_invoices:
         amunt+=inv.loyalty_amount
-    doc.custom_loyalty_amount = amunt
+    doc.custom_get_loyalty_amount = amunt
 
 
