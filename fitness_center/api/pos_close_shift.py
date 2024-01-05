@@ -13,6 +13,6 @@ def get_loyalty_amount(doc, method=None):
     print(len(get_invoices))
     for inv in get_invoices:
         amunt+=inv.loyalty_amount
-    doc.loyalty_amount = amunt
+    doc.custom_loyalty_amount = amunt
 
 
