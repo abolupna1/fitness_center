@@ -120,13 +120,13 @@ fixtures = ["Custom Field"]
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	"POS Closing Shift": {
+		"on_update": "fitness_center.api.pos_close_shift.get_loyalty_amount",
+		"before_insert": "fitness_center.api.pos_close_shift.get_loyalty_amount",
+		
+	}
+}
 
 # Scheduled Tasks
 # ---------------

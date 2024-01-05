@@ -1,0 +1,8 @@
+<div>
+    {% set doc = frappe.get_doc('Task', 'TASK00002') %}
+    {{ doc.title }} - {{ doc.status }}
+</div>
+<!-- output -->
+<div>
+    Buy Eggs - Open
+</div>

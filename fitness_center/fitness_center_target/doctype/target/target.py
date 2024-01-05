@@ -12,7 +12,6 @@ class Target(Document):
 
 
 
-
 @frappe.whitelist()
 def getTarget(id):
 	total_sales= 0

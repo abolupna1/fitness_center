@@ -8,6 +8,8 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "active",
+  "section_break_aptxv",
   "seller",
   "column_break_5ryir",
   "from_date",
@@ -25,7 +27,8 @@
   "section_break_e1ff0",
   "percentages",
   "section_break_hi2tx",
-  "subscriptions"
+  "subscriptions",
+  "amended_from"
  ],
  "fields": [
   {
@@ -38,6 +41,7 @@
    "reqd": 1
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "from_date",
    "fieldtype": "Date",
    "in_list_view": 1,
@@ -135,11 +139,30 @@
    "label": "Percentage",
    "precision": "1",
    "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Target",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "True",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active"
+  },
+  {
+   "fieldname": "section_break_aptxv",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-12-13 12:38:40.818733",
+ "modified": "2023-12-20 10:17:13.883323",
  "modified_by": "Administrator",
  "module": "Fitness Center Target",
  "name": "Target",
@@ -160,7 +183,8 @@
   },
   {
    "read": 1,
-   "role": "Target Employee"
+   "role": "Target Employee",
+   "write": 1
   }
  ],
  "sort_field": "modified",
