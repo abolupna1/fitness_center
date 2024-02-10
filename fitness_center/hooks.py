@@ -132,7 +132,7 @@ doc_events = {
 # ---------------
 scheduler_events = {
 	"cron": {
-        "* * * * *" : [
+        "0 4 * * *" : [
 		"fitness_center.fitness_center.doctype.customer_visits.customer_visits.update_all_re"
 	]
 	}

@@ -174,13 +174,15 @@
    "fieldtype": "Column Break"
   },
   {
+   "bold": 1,
    "fieldname": "remaining_visits",
    "fieldtype": "Int",
-   "label": "Remaining Visits"
+   "label": "Remaining Visits",
+   "read_only": 1
   }
  ],
  "links": [],
- "modified": "2024-02-10 13:31:57.077923",
+ "modified": "2024-02-10 14:15:06.719197",
  "modified_by": "Administrator",
  "module": "Fitness Center",
  "name": "Customer Visits",

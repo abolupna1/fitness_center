@@ -5,16 +5,9 @@ import frappe
 from frappe.model.document import Document
 
 class CustomerVisits(Document):
-	pass
+	def on_change(self):
+		update_all_re_by_id(self.customer_record_number)
 
-	  
-	# def validate(self):
-		# count = frappe.db.count('Customer Visits',
-		# 					filters={
-		# 						'status_schedule': 'Scheduled',
-		# 						'customer_record_number':self.customer_record_number
-		# 					})
-		# self.remaining_visits = count
 
 		
 
@@ -22,6 +15,30 @@ class CustomerVisits(Document):
 	
 	
 	
+
+def update_all_re_by_id(customer_record_number):
+		visits = frappe.db.get_list('Customer Visits',
+						filters={
+					'customer_record_number':customer_record_number
+				},
+		fields=['name','customer_record_number']
+		)
+
+		for v in visits:
+			count = frappe.db.count('Customer Visits',
+						filters={
+							'status_schedule': 'Scheduled',
+							'customer_record_number':v.customer_record_number
+						})
+			frappe.db.set_value('Customer Visits', v.name, 'remaining_visits', count, update_modified=False)
+		frappe.db.commit()
+
+
+
+		
+
+
+
 	  
 	
 

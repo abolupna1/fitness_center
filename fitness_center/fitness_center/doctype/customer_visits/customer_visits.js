@@ -18,9 +18,15 @@ frappe.ui.form.on('Customer Visits', {
 					status_schedule: 'Finish',
 				})
 						frm.save();
+						
+						
 					});
+				
 		}
 
 		frm.set_df_property('customer_record_number', 'only_select', true);
-	}
+	},
+	after_save(frm) {
+		frm.reload_doc();
+	},
 });
