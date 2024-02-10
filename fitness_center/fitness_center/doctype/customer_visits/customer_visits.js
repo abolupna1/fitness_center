@@ -17,14 +17,10 @@ frappe.ui.form.on('Customer Visits', {
 				frm.set_value({
 					status_schedule: 'Finish',
 				})
-				
 						frm.save();
-			
 					});
 		}
 
 		frm.set_df_property('customer_record_number', 'only_select', true);
-
-
 	}
 });

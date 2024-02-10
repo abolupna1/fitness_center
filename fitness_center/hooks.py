@@ -130,12 +130,14 @@ doc_events = {
 
 # Scheduled Tasks
 # ---------------
-# scheduler_events = {
-# 	"cron": [
-# 		"fitness_center.tasks.all"
-# 	],
+scheduler_events = {
+	"cron": {
+        "* * * * *" : [
+		"fitness_center.fitness_center.doctype.customer_visits.customer_visits.update_all_re"
+	]
+	}
 
-# }
+}
 # scheduler_events = {
 #	"all": [
 #		"fitness_center.tasks.all"
